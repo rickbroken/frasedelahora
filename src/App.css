@@ -1,0 +1,155 @@
+body {
+  font-family: -apple-system,inherit,BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",sans-serif;
+}
+.main {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease-out;
+}
+.App {
+  width: 90%;
+  max-width:500px;
+  height:180px;
+  border: 1px solid rgba(255, 255, 255, 0.205);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease-out;
+}
+.contenedor-body-tweet {
+  width: 90%;
+}
+.contenedor-head {
+  display: flex;
+  align-items: center;
+}
+.contenedor-name-user {
+  height: 70%;
+  margin-left: 10px;
+}
+.name-tweet {
+  font-weight: 800;
+  color: white;
+  transition: 0.5s all ease-out;
+}
+.user-tweet {
+  color: rgb(175, 175, 175);
+  transition: 0.5s all ease-out;
+}
+.img-perfil {
+  width: 60px;
+  border-radius: 50%;
+}
+.contenedor-tweet{
+  margin-top: 10px;
+}
+.contenedor-tweet .tweet,
+.contenedor-tweet .autor {
+  color: rgb(255, 255, 255);
+  font-size: 1.05rem;
+  font-weight: 400;
+  transition: 0.5s all ease-out;
+}
+.contenedor-tweet .autor {
+  margin-bottom: 5px;
+}
+.footer-tweet {
+  color: rgb(155, 155, 155);
+  font-size: 0.9rem;
+  transition: 0.5s all ease-out;
+}
+span {
+  color: rgba(72, 188, 255, 0.767);
+}
+
+
+.setTema {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+}
+.setTema:hover {
+  border: 2px solid rgb(99, 99, 99);
+}
+.setCaptura {
+  position: fixed;
+  right: 15px;
+  bottom: 70px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+}
+.setCaptura:hover {
+  border: 2px solid rgb(99, 99, 99);
+}
+
+
+
+.dia .setTema,
+.dia .setCaptura {
+  border: 2px solid gray;
+  background-color: rgb(255, 255, 255);
+}
+.dia .setTema:hover,
+.dia .setCaptura:hover {
+  border: 2px solid rgb(99, 99, 99);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dia {
+  background-color: rgb(255, 255, 255);
+}
+.dia  .App {
+  border: 1px solid rgba(0, 0, 0, 0.103);
+}
+.dia  .name-tweet {
+  color: rgb(49, 49, 49);
+}
+.dia  .user-tweet {
+  color: rgb(190, 190, 190);
+}
+.dia .contenedor-tweet .tweet, 
+.dia .contenedor-tweet .autor {
+  color: rgb(51, 51, 51);
+}
+.dia  .footer-tweet {
+  color: rgb(167, 167, 167);
+}

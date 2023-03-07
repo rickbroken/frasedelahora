@@ -20,14 +20,14 @@ function App() {
   }
 
   function handleDownloadClick() {
-    // Selecciona el div que quieres capturar
+    // Se selecciona el div que se quiere capturar
     const element = document.getElementById('App');
   
-    // Usa la función html2canvas para generar la imagen
+    // Se usa función html2canvas para generar la imagen
     html2canvas(element).then(canvas => {
       // Crea un enlace para descargar la imagen
       const link = document.createElement('a');
-      link.download = 'captura-de-pantalla.png';
+      link.download = 'FraseDelAhora.png';
   
       // Convierte el canvas en un blob y establece el enlace
       canvas.toBlob(blob => {

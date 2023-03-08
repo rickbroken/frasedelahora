@@ -11,10 +11,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(97, 97, 97);
 }
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgb(39, 39, 39);
 }

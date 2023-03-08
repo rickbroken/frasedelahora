@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import Tweet from './componentes/Tweet';
 import { Icon } from '@iconify/react';
-import html2canvas from 'html2canvas';
+import domToImage from 'dom-to-image';
+import moment from 'moment';
 
 function App() {
 
@@ -19,24 +20,23 @@ function App() {
     }
   }
 
+  const fechaHoy = moment();
+  const fechaFormateada = fechaHoy.format('DD-MM-YYYY');
   function handleDownloadClick() {
-    // Se selecciona el div que se quiere capturar
+    // Selecciona el div que quieres capturar
     const element = document.getElementById('App');
   
-    // Se usa función html2canvas para generar la imagen
-    html2canvas(element).then(canvas => {
-      // Crea un enlace para descargar la imagen
-      const link = document.createElement('a');
-      link.download = 'FraseDelAhora.png';
+    // Usa la función domToImage para generar la imagen
+    domToImage.toBlob(element)
+      .then(blob => {
+        // Crea un enlace para descargar la imagen
+        const link = document.createElement('a');
+        link.download = `FraseDelAhora ${fechaFormateada}.png`;
   
-      // Convierte el canvas en un blob y establece el enlace
-      canvas.toBlob(blob => {
+        // Establece el enlace y haz clic en él para descargar la imagen
         link.href = URL.createObjectURL(blob);
-  
-        // Haz clic en el enlace para descargar la imagen
         link.click();
       });
-    });
   }
 
   return (

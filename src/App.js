@@ -26,8 +26,15 @@ function App() {
     // Selecciona el div que quieres capturar
     const element = document.getElementById('App');
   
-    // Usa la función domToImage para generar la imagen
-    domToImage.toBlob(element)
+    // Define las opciones de configuración para la función domToImage
+    const options = {
+      style: {
+        'image-rendering': 'pixelated',
+      },
+    };
+  
+    // Usa la función domToImage para generar la imagen con las opciones de configuración
+    domToImage.toBlob(element, options)
       .then(blob => {
         // Crea un enlace para descargar la imagen
         const link = document.createElement('a');
